@@ -1,8 +1,11 @@
 {
+  "schemaVersion": 2,
   "id": "alfheim",
   "name": "Alfheim",
   "game": "valheim",
-  "description": "A Valheim world managed by Bow.",
+  "enabled": true,
+  "description": "A Valheim World Managed by Bow",
+  "page": "page.html",
   "connection": {
     "host": "144.126.153.89",
     "port": 33500,
@@ -18,9 +21,9 @@
     "steamAppId": 892970,
     "arguments": "+connect {host}:{port}"
   },
-  "page": "page.html",
-  "assets": {
-    "background": "assets/background.png"
+  "bridge": {
+    "joinAction": "join-server",
+    "refreshAction": "refresh-status"
   },
   "sponsor": {
     "name": "Potter Service",

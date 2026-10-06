@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "id": "welcome",
-      "title": "Welcome to Potter Service Game Launcher",
-      "body": "The launcher project is now in development.",
+      "id": "hub-v02",
+      "title": "Custom Server Pages",
+      "body": "Potter Service Game Hub now supports a dedicated HTML design for every server.",
       "enabled": true
     }
   ]

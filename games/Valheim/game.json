@@ -1,11 +1,12 @@
 {
+  "schemaVersion": 2,
   "id": "valheim",
   "name": "Valheim",
   "provider": "Steam",
   "steamAppId": 892970,
   "page": "page.html",
   "assets": {
-    "icon": "assets/icon.png",
-    "background": "assets/background.jpg"
+    "background": "assets/background.jpg",
+    "icon": "assets/icon.png"
   }
 }

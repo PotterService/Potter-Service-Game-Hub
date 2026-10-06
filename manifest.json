@@ -1,16 +1,17 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "hubVersion": "0.2.0",
   "launcher": {
     "name": "Potter Service Game Launcher",
-    "latestVersion": "0.1.0",
-    "minimumVersion": "0.1.0",
+    "minimumVersion": "0.2.0",
     "maintenance": false
   },
   "games": [
     {
       "id": "valheim",
       "name": "Valheim",
-      "folder": "games/Valheim"
+      "folder": "games/Valheim",
+      "enabled": true
     }
   ],
   "servers": [

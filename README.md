@@ -1,21 +1,48 @@
-# Potter Service Game Launcher — Content Repository
+# Potter Service Game Hub v0.2
 
-Remote content/configuration for the Potter Service Game Launcher.
+This repository supplies dynamic content to Potter Service Game Launcher.
 
-## Structure
-- `manifest.json` — master launcher index
-- `games/` — supported games, pages and assets
-- `servers/` — server definitions, pages and assets
-- `news/` — launcher announcements
+## Important change in v0.2
 
-## Adding a server
-Create a folder under `servers/`, add `server.json`, `page.html`, and assets, then add it to `manifest.json`.
+Every game and every server can have its own custom HTML page.
 
-## Included starter server
-Alfheim is configured for Valheim. Its connection and query ports are stored in `server.json`, but `showAddress` is false so the future launcher will not display them. The server password is not stored.
+`servers/Alfheim/page.html` is the first example. The launcher will render this
+page inside its embedded browser rather than creating a generic C# server card.
 
-The HTML uses `data-launch-action="join-server"` so the future desktop app can intercept the button and launch the configured game/server.
+### Server page bridge
 
-Do not commit passwords, API keys, private tokens, or Git credentials.
+Custom pages can request native launcher actions with:
 
-Sponsored by Potter Service — https://potterservice.com
+- `pslauncher://join-server`
+- `pslauncher://refresh-status`
+
+The launcher will intercept those actions. Connection information remains in
+`server.json`, not in the HTML design.
+
+The launcher can inject live status into a page by calling:
+
+`window.PotterLauncher.setServerStatus({ online, players, maxPlayers })`
+
+## Adding future servers
+
+Create:
+
+servers/YourServer/
+  server.json
+  page.html
+  assets/
+
+Then add that server to the `servers` array in `manifest.json`.
+
+## Adding future games
+
+Create:
+
+games/YourGame/
+  game.json
+  page.html
+  assets/
+
+Then add that game to the `games` array in `manifest.json`.
+
+Do not commit passwords, API keys, Git credentials, or other secrets.
