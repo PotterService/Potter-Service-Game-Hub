@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "launcher": {
+    "name": "Potter Service Game Launcher",
+    "latestVersion": "0.1.0",
+    "minimumVersion": "0.1.0",
+    "maintenance": false
+  },
+  "games": [
+    {
+      "id": "valheim",
+      "name": "Valheim",
+      "folder": "games/Valheim"
+    }
+  ],
+  "servers": [
+    {
+      "id": "alfheim",
+      "name": "Alfheim",
+      "game": "valheim",
+      "folder": "servers/Alfheim",
+      "enabled": true
+    }
+  ],
+  "news": "news/news.json"
+}
