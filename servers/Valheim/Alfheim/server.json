@@ -8,6 +8,7 @@
   "inactiveMessage": "This server is currently unavailable.",
   "description": "A Valheim World Managed by Bow",
   "page": "page.html",
+  "logo": "assets/logo.png",
   "thumbnail": "assets/thumbnail.png",
   "connection": {
     "host": "144.126.153.89",
