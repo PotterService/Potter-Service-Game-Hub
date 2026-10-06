@@ -1,1 +1,1 @@
-Optional game artwork: background.jpg and icon.png.
+Add icon.png and background.jpg for Valheim.

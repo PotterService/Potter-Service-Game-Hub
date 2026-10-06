@@ -1,9 +1,9 @@
 {
   "items": [
     {
-      "id": "hub-v02",
-      "title": "Custom Server Pages",
-      "body": "Potter Service Game Hub now supports a dedicated HTML design for every server.",
+      "id": "v03",
+      "title": "Game Hub v0.3",
+      "body": "Custom Home, Favorites, grouped servers, activation controls, and Programs.",
       "enabled": true
     }
   ]

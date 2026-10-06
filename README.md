@@ -1,48 +1,36 @@
-# Potter Service Game Hub v0.2
+# Potter Service Game Hub v0.3
 
-This repository supplies dynamic content to Potter Service Game Launcher.
+## New architecture
 
-## Important change in v0.2
+### Custom Home
+`home/page.html` controls the launcher's Home design. You can change its HTML/CSS/assets in Git without rebuilding the launcher.
 
-Every game and every server can have its own custom HTML page.
+### Favorites
+The next launcher stores each user's hearts/favorites locally on their own computer. Games and individual servers can be favorited. Favorites are not stored in this public repo.
 
-`servers/Alfheim/page.html` is the first example. The launcher will render this
-page inside its embedded browser rather than creating a generic C# server card.
+### Servers grouped by game
+The Servers screen first reads game categories:
 
-### Server page bridge
+servers/
+  Valheim/
+    category.json
+    assets/logo.png
+    Alfheim/
+      server.json
+      page.html
+      assets/
 
-Custom pages can request native launcher actions with:
+Click the Valheim logo -> list all published Valheim servers -> click a server -> load its custom HTML page.
 
-- `pslauncher://join-server`
-- `pslauncher://refresh-status`
+To add another Valheim server, create another sibling folder under `servers/Valheim/` and add it to `category.json`.
 
-The launcher will intercept those actions. Connection information remains in
-`server.json`, not in the HTML design.
+### Active / deactivated
+`enabled` controls whether an item is published/listed.
+`active` in `server.json` controls whether joining is currently allowed.
+Set `active: false` to keep a server visible but disable joining and show its `inactiveMessage`.
+A category also has `enabled`, allowing the entire game-server category to be hidden.
 
-The launcher can inject live status into a page by calling:
+### Programs
+`programs/` is now a full launcher section for things such as Steam download links, Discord, Potter Service utilities, installers, and future tools.
 
-`window.PotterLauncher.setServerStatus({ online, players, maxPlayers })`
-
-## Adding future servers
-
-Create:
-
-servers/YourServer/
-  server.json
-  page.html
-  assets/
-
-Then add that server to the `servers` array in `manifest.json`.
-
-## Adding future games
-
-Create:
-
-games/YourGame/
-  game.json
-  page.html
-  assets/
-
-Then add that game to the `games` array in `manifest.json`.
-
-Do not commit passwords, API keys, Git credentials, or other secrets.
+Never commit passwords, API keys, private tokens, or other secrets.

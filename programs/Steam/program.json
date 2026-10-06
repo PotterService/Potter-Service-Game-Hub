@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 3,
+  "id": "steam",
+  "name": "Steam",
+  "enabled": true,
+  "type": "external-link",
+  "description": "Install Steam to access supported games.",
+  "website": "https://store.steampowered.com/about/",
+  "page": "page.html",
+  "assets": {
+    "icon": "assets/icon.png",
+    "background": "assets/background.jpg"
+  }
+}

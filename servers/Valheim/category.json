@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 3,
+  "id": "valheim",
+  "name": "Valheim",
+  "enabled": true,
+  "logo": "assets/logo.png",
+  "background": "assets/background.jpg",
+  "servers": [
+    {
+      "id": "alfheim",
+      "name": "Alfheim",
+      "folder": "servers/Valheim/Alfheim",
+      "enabled": true
+    }
+  ]
+}

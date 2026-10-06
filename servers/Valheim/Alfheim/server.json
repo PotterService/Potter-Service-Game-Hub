@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "id": "alfheim",
+  "name": "Alfheim",
+  "game": "valheim",
+  "enabled": true,
+  "active": true,
+  "inactiveMessage": "This server is currently unavailable.",
+  "description": "A Valheim World Managed by Bow",
+  "page": "page.html",
+  "thumbnail": "assets/thumbnail.png",
+  "connection": {
+    "host": "144.126.153.89",
+    "port": 33500,
+    "queryPort": 33501
+  },
+  "display": {
+    "showAddress": false,
+    "showStatus": true,
+    "showPlayers": true
+  },
+  "launch": {
+    "type": "steam",
+    "steamAppId": 892970,
+    "arguments": "+connect {host}:{port}"
+  },
+  "sponsor": {
+    "name": "Potter Service",
+    "website": "https://potterservice.com"
+  },
+  "managedBy": "Bow"
+}

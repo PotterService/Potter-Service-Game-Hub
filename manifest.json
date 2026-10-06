@@ -1,10 +1,11 @@
 {
-  "schemaVersion": 2,
-  "hubVersion": "0.2.0",
+  "schemaVersion": 3,
+  "hubVersion": "0.3.0",
   "launcher": {
     "name": "Potter Service Game Launcher",
-    "minimumVersion": "0.2.0",
-    "maintenance": false
+    "minimumVersion": "0.3.0",
+    "maintenance": false,
+    "home": "home/home.json"
   },
   "games": [
     {
@@ -14,12 +15,20 @@
       "enabled": true
     }
   ],
-  "servers": [
+  "serverGames": [
     {
-      "id": "alfheim",
-      "name": "Alfheim",
-      "game": "valheim",
-      "folder": "servers/Alfheim",
+      "id": "valheim",
+      "name": "Valheim",
+      "folder": "servers/Valheim",
+      "enabled": true,
+      "logo": "assets/logo.png"
+    }
+  ],
+  "programs": [
+    {
+      "id": "steam",
+      "name": "Steam",
+      "folder": "programs/Steam",
       "enabled": true
     }
   ],
