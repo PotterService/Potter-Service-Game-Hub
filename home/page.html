@@ -1,1 +1,137 @@
-<!doctype html><html><head><meta charset="utf-8"><style>html,body{height:100%;margin:0}body{background:#080b10;color:white;font-family:Segoe UI}.hero{height:100%;display:flex;align-items:flex-end;padding:7%;box-sizing:border-box;background:linear-gradient(0deg,#06080de8,#06080d33),url('assets/background.jpg') center/cover}.panel{max-width:760px;padding:30px;border-radius:20px;background:#0b0e14d9}h1{font-size:52px;margin:0 0 10px}p{font-size:18px}</style></head><body><main class="hero"><section class="panel"><h1>Potter Service Game Launcher</h1><p>Games, community servers, programs, news, and more.</p></section></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Potter Service Game Launcher</title>
+<style>
+:root{
+  --bg:#05070c;--panel:#0c111bd9;--line:#ffffff12;--text:#f7f9ff;
+  --muted:#9aa8bc;--cyan:#65d9ff;--violet:#a579ff;--pink:#ef70c9;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text)}
+body{overflow-x:hidden}
+.page{
+ min-height:100vh;
+ background:
+ linear-gradient(90deg,rgba(4,6,11,.98) 0%,rgba(4,6,11,.88) 42%,rgba(4,6,11,.38) 100%),
+ linear-gradient(0deg,#05070c 0%,transparent 55%),
+ url('assets/background.jpg') center/cover fixed;
+}
+.wrap{max-width:1220px;margin:auto;padding:55px 6% 70px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:70px}
+.brand{font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.live{display:flex;align-items:center;gap:8px;color:#b9c5d7;font-size:12px}
+.live i{width:7px;height:7px;border-radius:50%;background:#75efb4;box-shadow:0 0 14px #75efb4}
+.hero{max-width:830px}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+h1{font-size:clamp(54px,7.6vw,94px);line-height:.9;letter-spacing:-.055em;margin:16px 0 22px}
+h1 span{
+ background:linear-gradient(100deg,#fff 0%,#80dcff 43%,#b994ff 72%,#f28bd0 100%);
+ -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.intro{max-width:720px;font-size:19px;line-height:1.7;color:#c1cad8;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:27px 0 52px}
+.chip{padding:8px 12px;border-radius:999px;background:#0c1320aa;border:1px solid var(--line);font-size:12px;color:#cbd5e5}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:0 0 16px}
+.section-head h2{font-size:27px;margin:0;letter-spacing:-.025em}
+.section-head p{margin:0;color:#7f8ba0;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.card{
+ position:relative;overflow:hidden;min-height:210px;padding:25px;border-radius:20px;
+ border:1px solid var(--line);background:linear-gradient(145deg,#101724e8,#090d15e8);
+ box-shadow:0 22px 60px #00000038
+}
+.card:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;filter:blur(65px);opacity:.22;right:-45px;top:-45px;background:var(--glow,var(--cyan))}
+.card.big{grid-column:span 7}.card.small{grid-column:span 5}.card.third{grid-column:span 4}
+.num{font-size:11px;font-weight:800;letter-spacing:.16em;color:#66758b}
+.icon{font-size:27px;margin:29px 0 15px}
+.card h3{font-size:21px;margin:0 0 9px}.card p{max-width:520px;margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+.tag{display:inline-block;margin-top:18px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#d5ddec}
+.about{
+ margin-top:15px;padding:32px;border-radius:20px;border:1px solid var(--line);
+ background:linear-gradient(120deg,#0d1420e8,#111020dc)
+}
+.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:35px;align-items:center}
+.about .mini{font-size:11px;font-weight:800;letter-spacing:.18em;color:var(--violet);text-transform:uppercase}
+.about h2{font-size:32px;line-height:1.05;margin:8px 0 0}.about p{color:#aab5c7;line-height:1.7;margin:0;font-size:15px}
+.bottom{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#66748a;font-size:12px}
+@media(max-width:780px){
+ .wrap{padding:35px 5% 50px}.topbar{margin-bottom:50px}h1{font-size:55px}
+ .card.big,.card.small,.card.third{grid-column:span 12}.about-grid{grid-template-columns:1fr}.intro{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+ <main class="wrap">
+  <header class="topbar">
+   <div class="brand">Potter Service // Game Launcher</div>
+   <div class="live"><i></i> Game Hub Connected</div>
+  </header>
+
+  <section class="hero">
+   <div class="kicker">Welcome to the Game Hub</div>
+   <h1>Everything you play.<br><span>One place.</span></h1>
+   <p class="intro">
+    Potter Service Game Launcher is the central home for Potter Service gaming — bringing community servers,
+    supported games, useful programs, favorites, server status, custom game pages, and news together inside one launcher.
+   </p>
+   <div class="chips">
+    <span class="chip">COMMUNITY SERVERS</span><span class="chip">LIVE STATUS</span>
+    <span class="chip">GAMES</span><span class="chip">PROGRAMS</span>
+    <span class="chip">FAVORITES</span><span class="chip">NEWS</span>
+   </div>
+  </section>
+
+  <div class="section-head"><h2>Inside the launcher</h2><p>Built to grow with the community.</p></div>
+  <section class="grid">
+   <article class="card big" style="--glow:#62d6ff">
+    <div class="num">01 // SERVERS</div><div class="icon">◈</div>
+    <h3>Find your next world.</h3>
+    <p>Browse community servers by game, open custom server pages, see available status and player information, and launch into supported worlds from one organized hub.</p>
+    <span class="tag">Server Hub</span>
+   </article>
+   <article class="card small" style="--glow:#a778ff">
+    <div class="num">02 // FAVORITES</div><div class="icon">★</div>
+    <h3>Your stuff. Faster.</h3>
+    <p>Favorite the servers and content you return to most so your personal picks stay easy to reach.</p>
+    <span class="tag">Saved locally</span>
+   </article>
+   <article class="card third" style="--glow:#ef72c8">
+    <div class="num">03 // GAMES</div><div class="icon">◇</div>
+    <h3>Game hubs.</h3>
+    <p>Supported games get their own space for artwork, information, servers, and future content.</p>
+   </article>
+   <article class="card third" style="--glow:#6ce5b1">
+    <div class="num">04 // PROGRAMS</div><div class="icon">⌁</div>
+    <h3>Useful tools.</h3>
+    <p>Keep gaming programs and useful links alongside the games and servers they support.</p>
+   </article>
+   <article class="card third" style="--glow:#ffb06a">
+    <div class="num">05 // DYNAMIC HUB</div><div class="icon">↻</div>
+    <h3>Always evolving.</h3>
+    <p>Hub content can change independently from the launcher, making it possible to add new pages, artwork, servers, programs, and news over time.</p>
+   </article>
+  </section>
+
+  <section class="about">
+   <div class="about-grid">
+    <div><div class="mini">Potter Service Gaming</div><h2>More than a server list.</h2></div>
+    <p>
+     The Game Launcher is being built as a home for the Potter Service gaming community. Each server can have its own identity,
+     artwork, information, status, and connection options while the launcher handles the native features behind the scenes.
+     As the hub grows, new games, worlds, tools, and community features can join it without turning the launcher into a cluttered list.
+    </p>
+   </div>
+  </section>
+
+  <footer class="bottom">
+   <span>Potter Service Game Launcher</span>
+   <span>PLAY • CONNECT • EXPLORE</span>
+  </footer>
+ </main>
+</div>
+</body>
+</html>
